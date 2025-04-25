@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vinay Arjun Bhure | CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #172a45;
+            --accent: #64ffda;
+            --text-primary: #ccd6f6;
+            --text-secondary: #8892b0;
+        }
+        
+        body {
+            background-color: var(--primary);
+            color: var(--text-primary);
+            font-family: 'Calibri', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--secondary);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+        }
+        
+        .profile-text h1 {
+            color: var(--accent);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-size: 2.2rem;
+        }
+        
+        .profile-text h2 {
+            color: var(--text-secondary);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-weight: normal;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .contact-item i {
+            color: var(--accent);
+            width: 20px;
+            text-align: center;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            color: var(--accent);
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .section-title i {
+            font-size: 1.5rem;
+        }
+        
+        .about-content {
+            background-color: var(--secondary);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent);
+            line-height: 1.7;
+        }
+        
+        .education-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .education-item {
+            display: flex;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .education-date {
+            width: 150px;
+            padding-right: 2rem;
+            text-align: right;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .education-content {
+            flex: 1;
+            padding: 1.5rem;
+            background-color: var(--secondary);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+            position: relative;
+        }
+        
+        .education-content::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            left: -10px;
+            top: 24px;
+        }
+        
+        .education-content h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+        
+        .education-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .detail-card {
+            background-color: rgba(100, 255, 218, 0.1);
+            padding: 0.8rem 1.2rem;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .detail-card i {
+            color: var(--accent);
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-category {
+            background-color: var(--secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+        
+        .skill-category h3 {
+            color: var(--accent);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .skill-list li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.8rem;
+        }
+        
+        .skill-list li::before {
+            content: "▹";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+        }
+        
+        .certificate-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .certificate-card {
+            background-color: var(--secondary);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border-left: 3px solid var(--accent);
+        }
+        
+        .certificate-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .certificate-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--primary);
+        }
+        
+        .certificate-info {
+            padding: 1.5rem;
+        }
+        
+        .certificate-info h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+        
+        .certificate-info p {
+            margin: 0;
+            color: var(--text-secondary);
+        }
+        
+        .btn-container {
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #52d4b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+        }
+        
+        .btn i {
+            margin-right: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--secondary);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .education-item {
+                flex-direction: column;
+            }
+            
+            .education-date {
+                width: 100%;
+                text-align: left;
+                padding-right: 0;
+                margin-bottom: 0.5rem;
+            }
+            
+            .education-content::before {
+                left: 10px;
+                top: -10px;
+            }
+            
+            nav {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="Qualification.html"><i class="fas fa-graduation-cap"></i> Qualifications</a>
+            <a href="Projects.html"><i class="fas fa-project-diagram"></i> Projects</a>
+            <a href="Certification.html"><i class="fas fa-certificate"></i> Certifications</a>
+            <a href="#"><i class="fas fa-file-alt"></i> Resume</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="profile-header">
+            <img src="Photo.jpg" alt="Yash Mali" class="profile-pic">
+            <div class="profile-text">
+                <h1>Yash Santosh Mali</h1>
+                <h2>Computer Engineering Student</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-birthday-cake"></i>
+                        <span>January 3, 2005</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>yashrajemali07@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 9284643062</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-university"></i>
+                        <span>Savitribai Phule Pune University</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-user"></i>
+                <span>About Me</span>
+            </h2>
+            <div class="about-content">
+                <p>First-year Computer Engineering student at MITAOE with a strong foundation in Computer Engineering. 
+                    Passionate about problem-solving, with demonstrated skills in web Developement, app Developement, and other technical skills.
+                    Eager to apply academic knowledge to real-world projects while continuously expanding my technical skills in Computer Enginnering.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Education</span>
+            </h2>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-date">2024 - Present</div>
+                    <div class="education-content">
+                        <h3>Bachelor of Technology in Software Engineering</h3>
+                        <p>Savitribai Phule Pune University</p>
+                        <div class="education-details">
+                            <div class="detail-card">
+                                <i class="fas fa-star"></i>
+                                <span>Current SGPA: 7.45</span>
+                            </div>
+                            <div class="detail-card">
+                                <i class="fas fa-calendar"></i>
+                                <span>Expected Graduation: 2028</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-laptop-code"></i>
+                <span>Skills</span>
+            </h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul class="skill-list">
+                        <li>Python Programming</li>
+                        <li>Web Developement</li>
+                        <li>Data visulazation</li>
+                        <li>Data Analysis</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li>Problem-solving</li>
+                        <li>Team Collaboration</li>
+                        <li>Time Management</li>
+                        <li>Effective Communication</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="btn-container">
+            <a href="index.html" class="btn">
+                <i class="fas fa-home"></i> Back to Home
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Yash Santosh Mali. All rights reserved.</p>
+    </footer>
+</body>
+</html>

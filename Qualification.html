@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yash Santosh Mali | Qualifications</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #172a45;
+            --accent: #64ffda;
+            --text-primary: #ccd6f6;
+            --text-secondary: #8892b0;
+        }
+        
+        body {
+            background-color: var(--primary);
+            color: var(--text-primary);
+            font-family: 'Calibri', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--secondary);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background-color: var(--secondary);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            border-left: 3px solid var(--accent);
+        }
+        
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+        }
+        
+        .profile-text h2 {
+            color: var(--accent);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        
+        .profile-text p {
+            margin: 0.3rem 0;
+            color: var(--text-secondary);
+        }
+        
+        .section-title {
+            color: var(--accent);
+            font-size: 1.8rem;
+            text-align: center;
+            margin: 3rem 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .education-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .education-item {
+            display: flex;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .education-date {
+            width: 120px;
+            padding-right: 2rem;
+            text-align: right;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .education-content {
+            flex: 1;
+            padding: 1.5rem;
+            background-color: var(--secondary);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+            position: relative;
+        }
+        
+        .education-content::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            left: -10px;
+            top: 24px;
+        }
+        
+        .education-content h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+        
+        .education-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .detail-card {
+            background-color: rgba(100, 255, 218, 0.1);
+            padding: 0.8rem 1.2rem;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .detail-card i {
+            color: var(--accent);
+        }
+        
+        .skills-section {
+            max-width: 900px;
+            margin: 3rem auto;
+        }
+        
+        .skill-category {
+            margin-bottom: 2rem;
+        }
+        
+        .skill-category h3 {
+            color: var(--accent);
+            border-bottom: 1px solid var(--secondary);
+            padding-bottom: 0.5rem;
+        }
+        
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .skill-item {
+            background-color: var(--secondary);
+            padding: 0.6rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-item:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .btn-container {
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #52d4b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+        }
+        
+        .btn i {
+            margin-right: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--secondary);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .education-item {
+                flex-direction: column;
+            }
+            
+            .education-date {
+                width: 100%;
+                text-align: left;
+                padding-right: 0;
+                margin-bottom: 0.5rem;
+            }
+            
+            .education-content::before {
+                left: 10px;
+                top: -10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="#"><i class="fas fa-graduation-cap"></i> Qualifications</a>
+            <a href="Projects.html"><i class="fas fa-project-diagram"></i> Projects</a>
+            <a href="Certification.html"><i class="fas fa-certificate"></i> Certifications</a>
+            <a href="Resume.html"><i class="fas fa-file-alt"></i> Resume</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h1>My Academic Journey</h1>
+        
+        <div class="profile-header">
+            <img src="photo.jpg" alt="Shreyash Telang" class="profile-pic">
+            <div class="profile-text">
+                <h2>Yash Santosh Mali</h2>
+                <p><i class="fas fa-university"></i> MIT Academy of Engineering, Pune</p>
+                <p><i class="fas fa-graduation-cap"></i> B.Tech in Computer Enginnering (Current)</p>
+                <p><i class="fas fa-star"></i> SGPA: 7.45 (First Year)</p>
+            </div>
+        </div>
+        
+        <h2 class="section-title">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Education Timeline</span>
+        </h2>
+        
+        <div class="education-timeline">
+            <div class="education-item">
+                <div class="education-date">2024 - Present</div>
+                <div class="education-content">
+                    <h3>Bachelor of Technology - Computer Engineering (First Year)</h3>
+                    <p>MIT Academy of Engineering, Pune</p>
+                    <div class="education-details">
+                        <div class="detail-card">
+                            <i class="fas fa-star"></i>
+                            <span>Current SGPA: 7.45</span>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-calendar"></i>
+                            <span>Expected Graduation: 2028</span>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-book"></i>
+                            <span>Relevant Coursework: C++, Python, JavaScript, HTMl</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-date">2022 - 2024</div>
+                <div class="education-content">
+                    <h3>Higher Secondary Education (12th Grade)</h3>
+                    <p>State Board, Maharashtra</p>
+                    <div class="education-details">
+                        <div class="detail-card">
+                            <i class="fas fa-percentage"></i>
+                            <span>Score: 79.60%</span>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-percentage"></i>
+                            <span>MHTCET Score: 86.20%tile</span>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-atom"></i>
+                            <span>Stream: Science (PCM)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-date">2021 - 2022</div>
+                <div class="education-content">
+                    <h3>Secondary Education (10th Grade)</h3>
+                    <p>State Board, Maharastra</p>
+                    <div class="education-details">
+                        <div class="detail-card">
+                            <i class="fas fa-percentage"></i>
+                            <span>Score: 95.40%</span>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-medal"></i>
+                            <span>Good at English and Maths</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="section-title">
+            <i class="fas fa-laptop-code"></i>
+            <span>Technical Skills</span>
+        </h2>
+        
+        <div class="skills-section">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skill-items">
+                    <div class="skill-item">C++</div>
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">HTML/CSS</div>
+                    <div class="skill-item">JavaScript</div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Soft Skills</h3>
+                <div class="skill-items">
+                    <div class="skill-item">Problem Solving</div>
+                    <div class="skill-item">Team Leadership</div>
+                    <div class="skill-item">Time Management</div>
+                    <div class="skill-item">Creative Thinking</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="btn-container">
+            <a href="index.html" class="btn">
+                <i class="fas fa-home"></i> Back to Home
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Yash Santosh Mali. All rights reserved.</p>
+    </footer>
+</body>
+</html>
